@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- move style to scss and preprocess with sublime plugin or use grunt on system -->
+    <style>
+        .nshow{
+            display: block
+        }
+        .nhide{
+            display: none
+        }
+        .block{
+            border: 1px solid black;
+            padding: 10px 0;
+        }
+    
+    </style>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="jumbotron text-center">
+  <h1>text</h1>
+</div>
+  
+<div id='main' class="container">
+  <div class="row">
+    <div id="balance" class="block col-sm-12">
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div id="status" class="block col-sm-12">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    </div>
+  </div>
+
+    <div class="row">
+    <div id="test" class="block col-sm-12">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit...</p>
+    </div>
+  </div>
+    
+</div>
+
+    
+<script>   
+
+//model - could leverage asuync call to data source based on dom attribute above
+var blocks = [
+{name:'balance', copy:'copy for balance'},
+{name:'status', copy:'copy for status'},
+{name:'test', copy:'copy for test'},
+];
+var i;
+
+
+/// content controller
+for (i = 0; i < blocks.length; i++) { 
+    iterator(blocks[i])
+
+}
+
+
+
+
+//view 
+function iterator(obj){
+  var rootnode = document.getElementById( blocks[i]['name']);
+  var targetnode;
+  targetnode = rootnode.lastElementChild;
+      addform(obj, rootnode, targetnode);
+}
+
+
+function addform(obj, rootnode, targetnode){
+    var newnode = document.createElement('div');
+    newnode.setAttribute("id", "forming");
+    newnode.className = 'nhide';
+    newnode.innerHTML = '<form><textarea name="comment">'+ blocks[i]['copy'] +'</textarea></form>';
+      targetnode.appendChild(newnode);
+            rootnode.onclick=function(){
+              //console.log(this.id);
+
+              //here set all to hide, except the event here
+              resetev(this.id);
+              
+          if( newnode.className === 'nhide'){
+              newnode.className = 'nshow';
+          }else{
+               newnode.className = 'nhide'
+          }
+      }; 
+}
+
+/****
+*****
+reset events
+*****/
+function resetev(x){
+  console.log('a test: ',  x);
+   var rootnode = document.getElementById( 'main');
+   //nsole.log( rootnode.children );
+   for (i = 0; i < rootnode.children.length; i++) { 
+    //console.log( rootnode.children[i].children[0].id );
+    //add hide class here
+    //console.log(   rootnode.children[i].children[0].id );
+    //console.log( rootnode.children[i].children[0].children[0].lastElementChild );
+      if( x !== rootnode.children[i].children[0].id ){
+        //console.log('b test: ','yes');
+        rootnode.children[i].children[0].children[0].lastElementChild.className = 'nhide'
+      }
+
+  }
+}
+
+    
+</script>
+</body>
+</html>
