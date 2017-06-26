@@ -1,21 +1,42 @@
 // base colors
 $base_bg: #cccccc;
 $base_a: #234545;
-$base_h1: #ffff67;
+$base_p: #ffff67;
+$base_div: #ffff67;
+
+// extend or use mixin if property values to pass as arg - may have some functions
+@import 'list';
+
+.nshow{
+    display: block
+}
+.nhide{
+    display: none
+}
+.block{
+    border: 1px solid black;
+    padding: 10px 0;
+}
+    
 
 // nest a nav
-h1{
-    color: $base_h1;
-    a{
-        color: $base_a;
-        
+
+div{
+    &#main{
+        > div.row{
+            > div#balance{
+                @include list(120px,#000000);
+            } 
+            > div#status{
+                @include list(120px,#000000);
+            }
+            > div#test{
+                @include list(120px,#000000);
+            }
+        }
     }
 }
 
 
-// extend for transitions or specific clients w/ placeholder %, use mixin if property values to pass as arg
-@import 'mqueries';
-@import 'list';
-p {
-  @include list;
-}
+
+

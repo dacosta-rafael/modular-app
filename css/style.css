@@ -1,0 +1,21 @@
+.nshow {
+  display: block; }
+
+.nhide {
+  display: none; }
+
+.block {
+  border: 1px solid black;
+  padding: 10px 0; }
+
+div#main > div.row > div#balance {
+  height: 120px;
+  background-color: #000000; }
+div#main > div.row > div#status {
+  height: 120px;
+  background-color: #000000; }
+div#main > div.row > div#test {
+  height: 120px;
+  background-color: #000000; }
+
+/*# sourceMappingURL=style.css.map */

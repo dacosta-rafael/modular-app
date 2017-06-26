@@ -1,4 +1,4 @@
-@mixin list ($x){
-    $x;
-    
+@mixin list($height: 120px, $bgcolor: #ffffff){
+	height: $height;
+    background-color: $bgcolor;
 }
