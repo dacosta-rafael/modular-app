@@ -1,0 +1,21 @@
+// base colors
+$base_bg: #cccccc;
+$base_a: #234545;
+$base_h1: #ffff67;
+
+// nest a nav
+h1{
+    color: $base_h1;
+    a{
+        color: $base_a;
+        
+    }
+}
+
+
+// extend for transitions or specific clients w/ placeholder %, use mixin if property values to pass as arg
+@import 'mqueries';
+@import 'list';
+p {
+  @include list;
+}
