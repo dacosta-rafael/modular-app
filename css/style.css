@@ -10,17 +10,26 @@
 
 div#main > div.row > div#balance {
   height: 120px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-transition: background-color 2s;
+  /* Safari */
+  transition: background-color 2s; }
   div#main > div.row > div#balance:hover {
     background-color: #cccccc; }
 div#main > div.row > div#status {
   height: 120px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-transition: background-color 2s;
+  /* Safari */
+  transition: background-color 2s; }
   div#main > div.row > div#status:hover {
     background-color: #cccccc; }
 div#main > div.row > div#test {
   height: 120px;
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  -webkit-transition: background-color 2s;
+  /* Safari */
+  transition: background-color 2s; }
   div#main > div.row > div#test:hover {
     background-color: #cccccc; }
 

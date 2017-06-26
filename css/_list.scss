@@ -1,4 +1,6 @@
 @mixin list($height: 120px, $bgcolor: #ffffff){
 	height: $height;
     background-color: $bgcolor;
+    -webkit-transition: background-color 2s; /* Safari */
+    transition: background-color 2s;
 }
