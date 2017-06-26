@@ -10,12 +10,18 @@
 
 div#main > div.row > div#balance {
   height: 120px;
-  background-color: #000000; }
+  background-color: #ffffff; }
+  div#main > div.row > div#balance:hover {
+    background-color: #cccccc; }
 div#main > div.row > div#status {
   height: 120px;
-  background-color: #000000; }
+  background-color: #ffffff; }
+  div#main > div.row > div#status:hover {
+    background-color: #cccccc; }
 div#main > div.row > div#test {
   height: 120px;
-  background-color: #000000; }
+  background-color: #ffffff; }
+  div#main > div.row > div#test:hover {
+    background-color: #cccccc; }
 
 /*# sourceMappingURL=style.css.map */

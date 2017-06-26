@@ -25,13 +25,22 @@ div{
     &#main{
         > div.row{
             > div#balance{
-                @include list(120px,#000000);
+                @include list(120px,#ffffff);
+                &:hover{
+                    background-color: $base_bg;
+                };
             } 
             > div#status{
-                @include list(120px,#000000);
+                @include list(120px,#ffffff);
+                &:hover{
+                    background-color: $base_bg;
+                };
             }
             > div#test{
-                @include list(120px,#000000);
+                @include list(120px,#ffffff);
+                &:hover{
+                    background-color: $base_bg;
+                };
             }
         }
     }
