@@ -39,10 +39,10 @@ div{
   border: 3px solid #c9c5c9;
   padding:5px;
 }
-
-
 </style>
+
 <div>
+I'm a cupcake maker
 <div id="icing"></div>
 <div id="flavor"></div>
 </div>
@@ -57,52 +57,13 @@ xmlhttp.onreadystatechange = function() {
         //console.log( myObj.flavor);
   document.getElementById("flavor").innerHTML = myObj.flavor;
   document.getElementById("icing").innerHTML = myObj.icing;
-
-
     }
 };
 
-
-
 var flavor = 'flavor';
 var icing = 'icing';
-
 var endponit = "http://dacostas.dynalias.com:8083/?q=cakeMaker&flavor=" +flavor+ "&icing=" +icing ;
-
-//console.log( endponit );
-
-
-
 xmlhttp.open("GET", endponit, true);
 xmlhttp.send();
 
-
-
-
-/***
-
-
-function Cake(flavor, quantity) {
- 
-    console.log(this);
-    this.flavor = flavor;
-    this.quantity = quantity;
-    console.log('is invoked.');
-    
-}
-
-var rafael = new Cake('Chocolate', '1');
-
-var mike = new Cake('Vanbilla', '3');
-
-Cake.prototype.getOrder = function() {
-    return this.quantity + ', ' + this.flavor;   
-}
-
-console.log(rafael.getOrder());
-console.log(mike.getOrder());
-
-***/
-
 </script>
-
